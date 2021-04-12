@@ -14,10 +14,13 @@
 
   <link href="./assets/apple-touch-icon.png" rel="apple-touch-icon">
   <link href="./assets/favicon.ico" rel="icon">
+  
 
 
 
   <title>Title page</title>
+
+  <link rel="stylesheet" type="text/css" href="style.css" />
 
 <link href="./main.a3f694c0.css" rel="stylesheet"></head>
 
@@ -59,33 +62,22 @@
   </nav>
 </header>
 
-<body>
-  <h1>Upload Your Design </h1>
-  <form class="form" id="myForm">
-    <input type="file" id="inpfile"><br>
-    <button type="submit">Upload File</button>
-  </form>
-
-<script>
-const myForm = document.getElementById("myForm");
-const inpFile = document.getElementById("inpFile");
-
-myForm.addEventListener("submit", e =>{
-    e.preventDefault();
-
-    const endpoint = "upload.php";
-    const formData = new FormData();
-
-
-
-    formData.append("inpFile", inpFile.files[0]);
-
-    fetch(endpoint, {
-      method: "post",
-      body: formData
-    }).catch(console.error);
-
-});
-</script>
-
-</body>
+<div class="container">
+  <section id="content">
+    <form action="">
+      <h1>Login</h1>
+      <div>
+        <input type="text" placeholder="Username" required="" id="username" />
+      </div>
+      <div>
+        <input type="password" placeholder="Password" required="" id="password" />
+      </div>
+      <div>
+        <input type="submit" value="Log in" />
+        <a href="#">Lost your password?</a>
+        <a href="./register.html">Register</a>
+      </div>
+    </form><!-- form -->
+    
+  </section><!-- content -->
+</div>
